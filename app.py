@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_debugtoolbar import DebugToolbarExtension
 from stories import story
 
@@ -9,4 +9,5 @@ debug = DebugToolbarExtension(app)
 
 @app.route("/")
 def homepage():
-    return render_template('madlib.html')
+    place = request.args["place"]
+    return render_template('madlib.html', place=place)
