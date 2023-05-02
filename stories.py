@@ -1,6 +1,5 @@
 """Madlibs Stories."""
 
-
 class Story:
     """Madlibs story.
 
