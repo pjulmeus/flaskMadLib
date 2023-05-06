@@ -8,12 +8,11 @@
 </head>
 <body>
     <h1>MadLib Game</h1>
-    <form action="/templates/stories.html">
-        <label for="place">Place</label><input type="text" placeholder="place" name="place"><p>
-        <label for="noun">Noun</label><input type="text" placeholder="noun" name="noun"><p>
-        <label for="verb">Verb</label><input type="text" placeholder="verb" name="verb"><p>
-        <label for="plural_noun">Plural Noun</label><input type="text" placeholder="Plural Noun" name="plural_noun"><p>
-        <button>Submit</button>
+    <form action="/mad">
+    {% for p in prop %}
+        <label for={{p}}>{{p}}</label><input type="text" placeholder={{p}} name={{p}}><p>
+    {% endfor %}
+        <button>Submit</button> 
     </form>
 </body>
 </html>
